@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131c">
+  <title>Pong — Arcade Classic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Pong home"><span class="brand-mark" aria-hidden="true">▰</span> PONG<span class="brand-dot">.</span></a>
+      <span class="eyebrow">THE ARCADE CLASSIC</span>
+    </header>
+
+    <section class="game-card" aria-label="Pong game">
+      <div class="game-heading">
+        <div>
+          <p class="eyebrow">FIRST TO FIVE WINS</p>
+          <h1>Ready to rally?</h1>
+        </div>
+        <div class="status-pill"><span class="status-dot" aria-hidden="true"></span><span id="status">READY</span></div>
+      </div>
+
+      <div class="scoreboard" aria-label="Scoreboard">
+        <div class="score-side player-score"><span class="player-label">YOU</span><span class="score" id="player-score">0</span></div>
+        <span class="score-divider" aria-hidden="true">:</span>
+        <div class="score-side computer-score"><span class="player-label">COMPUTER</span><span class="score" id="computer-score">0</span></div>
+      </div>
+
+      <div class="court-wrap">
+        <canvas id="court" width="800" height="500" aria-label="Pong court. Move your mouse or use the up and down arrow keys to control your paddle." role="img"></canvas>
+        <div class="overlay" id="overlay">
+          <div class="overlay-icon" aria-hidden="true">↗</div>
+          <p class="overlay-title" id="overlay-title">Your serve.</p>
+          <p class="overlay-copy" id="overlay-copy">Move your mouse or use ↑ and ↓ to play</p>
+          <button class="play-button" id="play-button" type="button">START GAME <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+
+      <footer class="game-footer">
+        <span><kbd>↑</kbd><kbd>↓</kbd> MOVE PADDLE</span>
+        <span class="footer-separator" aria-hidden="true">·</span>
+        <span>MOUSE ALSO WORKS</span>
+        <span class="footer-spacer"></span>
+        <button class="reset-button" id="reset-button" type="button" aria-label="Restart game">↻ <span>RESET</span></button>
+      </footer>
+    </section>
+    <p class="page-note">A little friendly competition never hurt anybody.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
